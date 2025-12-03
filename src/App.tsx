@@ -1,5 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+
+// Type definitions
+interface Slide {
+  type?: string;
+  heading: string;
+  text: string;
+  imageUrl?: string;
+}
 
 // ============================================
 // EDITABLE CONTENT SECTION - UPDATE YOUR TEXT AND IMAGES HERE
@@ -155,14 +163,14 @@ const ControlPanel = () => {
   const [theorySlide, setTheorySlide] = useState(0);
   const [reflectionSlide, setReflectionSlide] = useState(0);
   
-  const setDialPosition = (ai) => {
+  const setDialPosition = (ai: number) => {
     setAiTouch(ai);
     setHumanTouch(100 - ai);
     setProjectSlide(0);
     setActiveTheory(false);
   };
-  
-  const handleAiDialChange = (value) => {
+
+  const handleAiDialChange = (value: number) => {
     const snapped = Math.round(value / 50) * 50;
     setAiTouch(snapped);
     setHumanTouch(100 - snapped);
@@ -175,7 +183,7 @@ const ControlPanel = () => {
     return null;
   };
 
-  const SlideNavigation = ({ currentSlide, totalSlides, onPrev, onNext }) => (
+  const SlideNavigation = ({ currentSlide, totalSlides, onPrev, onNext }: { currentSlide: number; totalSlides: number; onPrev: () => void; onNext: () => void }) => (
     <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-700">
       <button
         onClick={onPrev}
@@ -203,7 +211,7 @@ const ControlPanel = () => {
 
   // Introduction Screen
   const IntroScreen = () => {
-    const currentSlide = CONTENT.introduction.slides[introSlide];
+    const currentSlide: Slide = CONTENT.introduction.slides[introSlide];
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 p-8">
@@ -279,12 +287,12 @@ const ControlPanel = () => {
   // Control Panel Screen
   const ControlPanelScreen = () => {
     const currentProject = getCurrentProject();
-    const displaySlides = activeTheory 
-      ? currentProject?.theoreticalFramework.slides 
+    const displaySlides = activeTheory
+      ? currentProject?.theoreticalFramework.slides
       : currentProject?.slides;
     const currentSlideIndex = activeTheory ? theorySlide : projectSlide;
     const setCurrentSlide = activeTheory ? setTheorySlide : setProjectSlide;
-    const currentSlide = displaySlides?.[currentSlideIndex];
+    const currentSlide: Slide | undefined = displaySlides?.[currentSlideIndex];
     const displayTitle = activeTheory 
       ? currentProject?.theoreticalFramework.title 
       : currentProject?.title;
@@ -336,9 +344,9 @@ const ControlPanel = () => {
 
                 <SlideNavigation
                   currentSlide={currentSlideIndex}
-                  totalSlides={displaySlides.length}
+                  totalSlides={displaySlides?.length || 0}
                   onPrev={() => setCurrentSlide(Math.max(0, currentSlideIndex - 1))}
-                  onNext={() => setCurrentSlide(Math.min(displaySlides.length - 1, currentSlideIndex + 1))}
+                  onNext={() => setCurrentSlide(Math.min((displaySlides?.length || 1) - 1, currentSlideIndex + 1))}
                 />
               </div>
             ) : (
