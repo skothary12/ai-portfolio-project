@@ -103,7 +103,7 @@ const CONTENT = {
           type: "text",
           heading: "The Project",
           text: "For our penultimate Vibe Coding class, \"Build something that inspires play,\" I worked on this interactive Urdu-Hindi learning game for young South Asian diaspora learners. In this level, children practice the construction \"Mujhey ____ Chahiye\" (tr. \"I want ___) with the lovable monster, Chef Jadoo. The game is full of surprises and silliness, and reinforces language learning while also appealing to children's senses of curiosity and play. This was one of the most technically complex projects I undertook, since it required voice recognition in Urdu-Hindi, an AI voiceover (which I created in ElevenLabs), Urdu-Hindi sample sentences (which I ended up having to record myself, due to the paucity of existing AI-generated audio for these languages) and tremendous iteration on the visuals of the game. In this project, I think I came close to achieving true creative collaboration with AI: I was able to strike a balance between articulating my own creative vision while also strategically relinquishing some creative control. This project is where I truly saw Minsky's assertion realised: I was astonished, and perhaps even a little intimidated, by the creative power of AI. In projects like this, I realised, it would be wasteful to limit AI's creative potential to the automation of lower-level tasks as Wiener (1950) and Licklider (1960) proposed.",
-          imageUrl: "/images/JK1.mov"
+          imageUrl: "/images/JK1.mp4"
         },
         {
           type: "text",
@@ -223,7 +223,7 @@ const ControlPanel = () => {
             
             <div className="flex-1 bg-slate-800 rounded p-8 border-2 border-amber-400/30 overflow-auto">
               <h3 className="text-2xl font-bold text-amber-400 mb-6" style={{fontFamily: 'Courier New, monospace'}}>{currentSlide.heading}</h3>
-              <div className="text-slate-200 text-lg leading-relaxed space-y-4" style={{fontFamily: 'Courier New, monospace'}}>
+              <div className="text-slate-200 text-xl leading-relaxed space-y-4" style={{fontFamily: 'Courier New, monospace'}}>
                 {currentSlide.text.split('\n').map((para, idx) => (
                   para.trim() && <p key={idx}>{para}</p>
                 ))}
@@ -329,7 +329,7 @@ const ControlPanel = () => {
                 )}
                 
                 <div className="flex-1 overflow-auto">
-                  <p className="text-slate-200 text-xl leading-relaxed whitespace-pre-line">
+                  <p className="text-slate-200 text-2xl leading-relaxed whitespace-pre-line">
                     {currentSlide.text}
                   </p>
                 </div>
@@ -497,7 +497,7 @@ const ControlPanel = () => {
               <h3 className="text-2xl font-bold text-orange-400 font-mono mb-4" dangerouslySetInnerHTML={{
                 __html: currentSlide.heading.replace(/WHAT/g, '<span style="color: #FFC107;">WHAT</span>').replace(/WHEN/g, '<span style="color: #FFC107;">WHEN</span>').replace(/HOW/g, '<span style="color: #FFC107;">HOW</span>')
               }}></h3>
-              <div className="text-slate-200 text-xl leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{
+              <div className="text-slate-200 text-2xl leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{
                 __html: currentSlide.text.replace(/\*\*(.*?)\*\*/g, '<span style="color: #FFC107; font-weight: bold;">$1</span>')
               }}></div>
             </div>
