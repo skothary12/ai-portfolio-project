@@ -340,7 +340,7 @@ const ControlPanel = () => {
                 )}
                 
                 <div className="flex-1 overflow-auto">
-                  <p className="text-slate-200 text-xl leading-relaxed whitespace-pre-line font-mono">
+                  <p className="text-slate-200 text-lg leading-relaxed whitespace-pre-line font-mono">
                     {currentSlide.text}
                   </p>
                 </div>
