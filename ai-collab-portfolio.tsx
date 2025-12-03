@@ -70,19 +70,19 @@ const CONTENT = {
           type: "text",
           heading: "The Project",
           text: "This is an example of a project in which I exercised complete control over the creative process, using AI only as a means to an end. This semester, I am enrolled in Professor Fernando Reimers' course, \"Education Policy Analysis in International and Comparative Perspective.\" As part of this course, we use the textbook \"Audacious Education Purposes,\" which details ambitious education reforms in a number of different countries. One of the activities that we frequently engage in is to come up with advice that we would have given the education minister at the beginning of the reform. I was always curious what this advice, if it had been taken into account, would have resulted in. For the Week 4 prompt of our Vibe Coding course, \"build something that answers a question,\" I built a companion to the textbook. Here, you can see that each chapter in the book corresponds to a different tab on the dashboard.",
-          imageUrl: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80"
+          imageUrl: "./images/A1.png"
         },
         {
           type: "text",
           heading: "The Features",
           text: "Once a student clicks into the tab for a country, they can see the entire chapter summarised in a series of succinct bullet points. These points help the student understand what the causes for the reform were, who the main actors were, and what the impact of the reform was.",
-          imageUrl: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80"
+          imageUrl: "./images/A2.png"
         },
         {
           type: "text",
           heading: "Analysis",
           text: "Finally, students can use an embedded AI chatbot to draft their advice to the minister, and generate a counterfactual for how things might have played out differently if their advice had been taken into account at the beginning of the reform. This project was a big lift compared to the artifacts I had created before in the course. In order to get the dashboard up and running - and potentially allow for its use by my classmates in the course - I had to learn how to use Claude Code in VS Studio (no more low-code pathway for me!), how to connect my work in VS Studio to Github, how to integrate ChatGPT's API into my web-app, and how to publish my work to Git Pages. If you had told me in Week 1 that I would actually want to spend hours figuring out how to make all this work, I would never have believed you! Nonetheless, this experience showed me what a powerful motivator a genuine investment in what you are building can be - a testament to the constructionist principles at the heart of this course. This project continues to be one I am extremely proud of.\n\nHowever, as I was looking over my design journal with the prompt for the position portfolio in mind, I realised that this project was not a good representation of creative collaboration, either. I had sketched out my vision for the dashboard on paper beforehand, and was meticulous about the details that I fed to Claude Code: I did not want to relinquish any creative control to AI, for fear that my web-app would not function the way I wanted it to. As I review my work, I am reminded of the arguments that Wiener (1950) and Minsky (1982) make: in essence, they both posit that human beings must learn when to relinquish control, though to differing degrees. While Wiener argues that we must delegate tasks requiring lower levels of judgement to machines, Minsky asserts that AI's performance inherently exceeds the instructions we give it. We must give up strict control of the output, he implies, allowing AI the agency to come up with creative solutions that we, as its human collaborators, have not yet explored. I am not sure if I agree with this for every task. I think part of learning how to use AI responsibly is to learn when to use it as a collaborator, and when to use it merely as an executor of commands. In a project like this, which is designed as an instructional experience, there is very little creative license: as a budding instructional designer, I know best what I would like my students (or, in this case, my colleagues) to take away from interacting with this web-app. In this setting, I choose to use AI more as Wiener imagined: I don't have to undertake the laborious tasks of learning how to code from scratch, or manually typing in data from a book. Instead, I can focus my energies on designing an output that maximises students' engagement and learning. For other tasks, Minsky's position makes more sense. Click on the \"Collaborative\" tab to see an example of a project where I used this approach!",
-          imageUrl: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80"
+          imageUrl: "./images/A3.png"
         }
       ],
       theoreticalFramework: {
@@ -103,19 +103,19 @@ const CONTENT = {
           type: "text",
           heading: "The Project",
           text: "For our penultimate Vibe Coding class, \"Build something that inspires play,\" I worked on this interactive Urdu-Hindi learning game for young South Asian diaspora learners. In this level, children practice the construction \"Mujhey ____ Chahiye\" (tr. \"I want ___) with the lovable monster, Chef Jadoo. The game is full of surprises and silliness, and reinforces language learning while also appealing to children's senses of curiosity and play. This was one of the most technically complex projects I undertook, since it required voice recognition in Urdu-Hindi, an AI voiceover (which I created in ElevenLabs), Urdu-Hindi sample sentences (which I ended up having to record myself, due to the paucity of existing AI-generated audio for these languages) and tremendous iteration on the visuals of the game. In this project, I think I came close to achieving true creative collaboration with AI: I was able to strike a balance between articulating my own creative vision while also strategically relinquishing some creative control. This project is where I truly saw Minsky's assertion realised: I was astonished, and perhaps even a little intimidated, by the creative power of AI. In projects like this, I realised, it would be wasteful to limit AI's creative potential to the automation of lower-level tasks as Wiener (1950) and Licklider (1960) proposed.",
-          imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80"
+          imageUrl: "./images/JK1.mov"
         },
         {
           type: "text",
           heading: "Technical Challenges",
           text: "Here is the first artifact I created for the game during a workshop on AI video generation by LDIT alum Luis Gaitan. I fell in love with the visuals that Veo3 had created for me based on my description, and was sorely disappointed to realise that Replit and Claude Code's animation capabilities were nowhere near Veo3's. After hours of iteration (and a lot of help from the Vibe Coding teaching team), we realised that Replit and Claude Code can create beautiful, detailed static images, but not animations. If I wanted an animation that resembled what I had created in Veo3, I would need to have AI generate a series of static images that I could run together at high speeds to create a stop-motion style animation. At this stage, I learned, human collaboration is still a necessity: AI is impressive, but it is not magical. There are still many limitations to its capabilities, and problem-solving around those limitations is a key skill that human beings will need to learn in this new age.\n\nI faced a similar challenge when trying to create scaffolds for the language learning tasks: I wanted children to be able to click on the ingredients to hear their names in Urdu-Hindi, and to be able to hear the grammatical structure for \"I want ___\" pronounced each time they clicked on the sample sentence in the bottom right-hand corner. I cycled through a number of AI-generated Urdu-Hindi voices, but could not find any that pronounced the words correctly. I did not want to settle for an inaccurate pronunciation that would teach children incorrectly, so I opted to record these sample words and phrases myself and embed them into the program. I think this project also threw into sharp relief for me the gap between resources available in English versus in other languages.",
-          imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80"
+          imageUrl: "./images/JK2.mp4"
         },
         {
           type: "text",
           heading: "Reflections",
           text: "As we read Hao's (2025) poignant and deeply moving chapter on the impact of AI on language loss and the fight to revitalise te reo using a small, specialised, and ethical language model, I was prompted to reflect more deeply on my own project. I wanted to use AI technology to rekindle young learners' interest in my mother tongue(s) of Urdu and Hindi. On the one hand, it is true that AI affords us a level of interactivity and engagement that has never previously been possible, and thus might actually be successful in preventing language loss among diaspora learners. However, it is also true that to achieve this goal, I am using a technology that actively contributes - at a large scale - to the same language loss I am trying to prevent. In talking to a classmate about my concerns, he shared his reflections about a similar tradeoff between the positive educational uses of AI and the environment. We had both enjoyed our Vibe Coding adventures tremendously, and agreed that it provided learners the motivation to amass more and more advanced technical skills - skills that they might not otherwise have put in the time and effort to learn. However, he struggled with letting engagement and motivation define whether or not to teach vibe coding in the classroom - \"if we let students think vibe coding is so much fun,\" he said, \"are they going to be motivated to address the environmental consequences of, say, coding a game within minutes or creating an automation for every little inconvenience?\" Sometimes as we grapple with the impacts of AI, it feels as though we are solving one problem only to exacerbate another. I think these concerns deeply inform my final (or, rather, final-for-now) position on how we should approach creative collaboration. Click 'Next' to read my final-for-now takeaways!",
-          imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80"
+          imageUrl: "./images/JK3.png"
         }
       ],
       theoreticalFramework: {
@@ -319,11 +319,21 @@ const ControlPanel = () => {
                 </div>
                 
                 {currentSlide.imageUrl && (
-                  <img 
-                    src={currentSlide.imageUrl} 
-                    alt={currentSlide.heading}
-                    className="w-full h-64 object-contain rounded border-2 border-slate-700 mb-4 bg-slate-900"
-                  />
+                  currentSlide.imageUrl.match(/\.(mp4|mov|webm)$/i) ? (
+                    <video
+                      src={currentSlide.imageUrl}
+                      controls
+                      className="w-full h-64 object-contain rounded border-2 border-slate-700 mb-4 bg-slate-900"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={currentSlide.imageUrl}
+                      alt={currentSlide.heading}
+                      className="w-full h-64 object-contain rounded border-2 border-slate-700 mb-4 bg-slate-900"
+                    />
+                  )
                 )}
                 
                 <div className="flex-1 overflow-auto">
