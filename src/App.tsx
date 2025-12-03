@@ -233,8 +233,8 @@ const ControlPanel = () => {
             </div>
             
             <div className="flex-1 bg-slate-800 rounded p-8 border-2 border-amber-400/30 overflow-auto">
-              <h3 className="text-2xl font-bold text-amber-400 mb-6" style={{fontFamily: 'Courier New, monospace'}}>{currentSlide.heading}</h3>
-              <div className="text-slate-200 text-xl leading-relaxed space-y-4" style={{fontFamily: 'Courier New, monospace'}}>
+              <h3 className="text-2xl font-bold text-amber-400 mb-6 font-mono">{currentSlide.heading}</h3>
+              <div className="text-slate-200 text-xl leading-relaxed space-y-4 font-mono">
                 {currentSlide.text.split('\n').map((para, idx) => (
                   para.trim() && <p key={idx}>{para}</p>
                 ))}
@@ -340,7 +340,7 @@ const ControlPanel = () => {
                 )}
                 
                 <div className="flex-1 overflow-auto">
-                  <p className="text-slate-200 text-2xl leading-relaxed whitespace-pre-line">
+                  <p className="text-slate-200 text-2xl leading-relaxed whitespace-pre-line font-mono">
                     {currentSlide.text}
                   </p>
                 </div>
@@ -508,7 +508,7 @@ const ControlPanel = () => {
               <h3 className="text-2xl font-bold text-orange-400 font-mono mb-4" dangerouslySetInnerHTML={{
                 __html: currentSlide.heading.replace(/WHAT/g, '<span style="color: #FFC107;">WHAT</span>').replace(/WHEN/g, '<span style="color: #FFC107;">WHEN</span>').replace(/HOW/g, '<span style="color: #FFC107;">HOW</span>')
               }}></h3>
-              <div className="text-slate-200 text-2xl leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{
+              <div className="text-slate-200 text-2xl leading-relaxed whitespace-pre-line font-mono" dangerouslySetInnerHTML={{
                 __html: currentSlide.text.replace(/\*\*(.*?)\*\*/g, '<span style="color: #FFC107; font-weight: bold;">$1</span>')
               }}></div>
             </div>
