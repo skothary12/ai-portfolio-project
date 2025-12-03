@@ -9,6 +9,9 @@ interface Slide {
   imageUrl?: string;
 }
 
+// Base path for GitHub Pages
+const BASE_PATH = import.meta.env.BASE_URL;
+
 // ============================================
 // EDITABLE CONTENT SECTION - UPDATE YOUR TEXT AND IMAGES HERE
 // ============================================
@@ -321,7 +324,7 @@ const ControlPanel = () => {
                 {currentSlide.imageUrl && (
                   currentSlide.imageUrl.match(/\.(mp4|mov|webm)$/i) ? (
                     <video
-                      src={currentSlide.imageUrl}
+                      src={BASE_PATH + currentSlide.imageUrl}
                       controls
                       className="w-full h-96 object-contain rounded border-2 border-slate-700 mb-4 bg-slate-900"
                     >
@@ -329,7 +332,7 @@ const ControlPanel = () => {
                     </video>
                   ) : (
                     <img
-                      src={currentSlide.imageUrl}
+                      src={BASE_PATH + currentSlide.imageUrl}
                       alt={currentSlide.heading}
                       className="w-full h-96 object-contain rounded border-2 border-slate-700 mb-4 bg-slate-900"
                     />
